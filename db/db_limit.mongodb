@@ -1,2 +1,35 @@
 use("db_limit");
+db.createCollection("user", {
+    capped: true,
+    size: 690,
+    max: 5
+});
 
+use("db_limit");
+db.user.insertMany([
+    {
+        "name": "Angel",
+        "apellido": "Velasco",
+        "edad": 100
+    },
+    {
+        "name": "aaaaaaaaaaaaaaaaaa",
+        "apellido": "aaaaaaaaaaaaaaaaaa",
+        "edad": 100
+    },
+    {
+        "name": "bbbbbbbbbbbbbbbbbbbb",
+        "apellido": "bbbbbbbbbbbbbbbbbbbb",
+        "edad": 100
+    },
+    {
+        "name": "cccccccccccccccccccc",
+        "apellido": "cccccccccccccccccccc",
+        "edad": 100
+    },
+    {
+        "name": "Angeddddddddddddddddddddl",
+        "apellido": "dddddddddddddddddddd",
+        "edad": 100
+    }
+]);
